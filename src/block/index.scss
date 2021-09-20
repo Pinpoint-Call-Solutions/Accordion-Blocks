@@ -43,9 +43,7 @@ $color-open-icon: #777;
 	transition: 0;
 	box-shadow: none;
 	overflow: auto;
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;
+	appearance: none;
 
 	&:focus,
 	&:hover {
@@ -58,25 +56,6 @@ $color-open-icon: #777;
 	position: relative;
 	padding-right: 2rem;
 	cursor: pointer;
-
-	&:after {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		content: "+";
-		color: $color-open-icon;
-		font-weight: 300;
-		-webkit-transform: translateY(-50%);
-		        transform: translateY(-50%);
-	}
-}
-
-.is-open {
-	> .c-accordion__title {
-		&:after {
-			content: "\2212";
-		}
-	}
 }
 
 [data-initially-open="false"] {

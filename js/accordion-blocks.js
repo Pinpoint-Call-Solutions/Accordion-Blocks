@@ -28,7 +28,7 @@
 
 		item.self       = $(this);
 		item.id         = $(this).attr('id');
-		item.controller = $(this).children('.js-accordion-controller');
+		item.controller = $(this).find('.js-accordion-controller');
 		item.uuid       = getAccordionItemUUID(item.self);
 		item.content    = $('#ac-' + item.uuid);
 		item.accordionGroupItems = [item.uuid];
@@ -137,7 +137,7 @@
 		 * Get the accordion item UUID for a given accordion item DOM element.
 		 */
 		function getAccordionItemUUID(ele) {
-			return $(ele).children('.js-accordion-controller').attr('id').replace('at-', '');
+			return $(ele).find('.js-accordion-controller').attr('id').replace('at-', '');
 		}
 
 

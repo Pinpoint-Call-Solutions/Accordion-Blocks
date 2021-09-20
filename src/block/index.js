@@ -73,13 +73,18 @@ registerBlockType('pb/accordion-item', {
 
 		return (
 			<div { ...blockProps }>
-				<RichText.Content
-					id={ 'at-' + uuid }
-					className={ titleClasses.join(' ') }
-					tagName={ titleTag }
-					role="button"
-					value={ title }
-				/>
+				<div className="accordion-header">
+					<RichText.Content
+						id={ 'at-' + uuid }
+						className={ titleClasses.join(' ') }
+						tagName={ titleTag }
+						role="button"
+						value={ title }
+					/>
+					<span className="material-icons">
+						arrow_drop_down
+					</span>
+				</div>
 				<div
 					id={ 'ac-' + uuid }
 					className="c-accordion__content"
