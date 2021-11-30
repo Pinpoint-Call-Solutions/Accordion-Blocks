@@ -301,19 +301,22 @@ const AccordionItemEdit = ({
 				</PanelBody>
 			</InspectorControls>
 			<div { ...blockProps }>
-				<RichText
-					className={ classnames('c-accordion__title', {
-						'c-accordion__title--button': titleTag === 'button',
-					}) }
-					tagName={ titleTag === 'button' ? 'div' : titleTag }
-					allowedFormats={ [
-						'core/bold',
-						'core/italic',
-					] }
-					placeholder={ __('Accordion item title…', 'accordion-blocks') }
-					value={ title }
-					onChange={ value => setAttributes({title: value}) }
-				/>
+				<div className="c-accordion__title">
+					<RichText
+						className={ classnames('c-accordion__title__heading', {
+							'c-accordion__title--button': titleTag === 'button',
+						}) }
+						tagName={ titleTag === 'button' ? 'div' : titleTag }
+						allowedFormats={ [
+							'core/bold',
+							'core/italic',
+						] }
+						placeholder={ __('Accordion item title…', 'accordion-blocks') }
+						value={ title }
+						onChange={ value => setAttributes({title: value}) }
+					/>
+				</div>
+
 				<div className="c-accordion__content">
 					<InnerBlocks />
 				</div>
