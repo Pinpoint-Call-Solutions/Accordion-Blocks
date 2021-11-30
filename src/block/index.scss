@@ -25,7 +25,7 @@ $color-open-icon: #777;
 	}
 }
 
-.c-accordion__title--button {
+.c-accordion__title__heading--button {
 	display: inline-block;
 	color: inherit;
 	background-color: transparent;
@@ -72,7 +72,7 @@ $color-open-icon: #777;
 }
 
 .is-open {
-	> .c-accordion__title {
+	> .c-accordion__title__heading {
 		&:after {
 			content: "\2212";
 		}

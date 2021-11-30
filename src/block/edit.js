@@ -304,7 +304,7 @@ const AccordionItemEdit = ({
 				<div className="c-accordion__title">
 					<RichText
 						className={ classnames('c-accordion__title__heading', {
-							'c-accordion__title--button': titleTag === 'button',
+							'c-accordion__title__heading--button': titleTag === 'button',
 						}) }
 						tagName={ titleTag === 'button' ? 'div' : titleTag }
 						allowedFormats={ [

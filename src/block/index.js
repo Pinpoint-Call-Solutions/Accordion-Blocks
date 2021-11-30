@@ -45,14 +45,14 @@ registerBlockType('pb/accordion-item', {
 		];
 
 		var titleClasses = [
-			'c-accordion__title',
+			'c-accordion__title__heading',
 			'js-accordion-controller',
 		];
 
 		var contentStyles = {};
 
 		if (titleTag === 'button') {
-			titleClasses.push('c-accordion__title--button');
+			titleClasses.push('c-accordion__title__heading--button');
 		}
 
 		if (initiallyOpen) {
